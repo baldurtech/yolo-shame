@@ -1,6 +1,8 @@
 package com.baldurtech.yolo.shame;
 
 public class FizzBuzzTest {
+    static Boolean testResult = true;
+
     public static void main(String[] args) {
         FizzBuzz app = new FizzBuzz();
 
@@ -9,9 +11,13 @@ public class FizzBuzzTest {
         assertEquals("Buzz", app.say(5));
         assertEquals("Buzz", app.say(10));
         assertEquals("FizzBuzz", app.say(15));
+
+        System.out.println("Test result: " + (testResult ? "SUCCESS" : "FAIL"));
     }
 
     public static void assertEquals(String expectedResult, String actualResult) {
-        System.out.println(expectedResult.equals(actualResult));
+        if(! expectedResult.equals(actualResult)) {
+            testResult = false;
+        }
     }
 }
