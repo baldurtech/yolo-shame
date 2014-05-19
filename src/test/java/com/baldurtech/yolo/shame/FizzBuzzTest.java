@@ -6,6 +6,10 @@ public class FizzBuzzTest {
     static Integer countFail = 0;
 
     public static void main(String[] args) {
+        runTest();
+    }
+
+    public static void runTest() {
         FizzBuzz app = new FizzBuzz();
 
         assertEquals("1", app.say(1));
