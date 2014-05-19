@@ -12,12 +12,16 @@ public class FizzBuzzTest {
         assertEquals("Buzz", app.say(10));
         assertEquals("FizzBuzz", app.say(15));
 
-        System.out.println("Test result: " + (testResult ? "SUCCESS" : "FAIL"));
+        outputTestReport();
     }
 
     public static void assertEquals(String expectedResult, String actualResult) {
         if(! expectedResult.equals(actualResult)) {
             testResult = false;
         }
+    }
+
+    public static void outputTestReport() {
+        System.out.println("Test result: " + (testResult ? "SUCCESS" : "FAIL"));
     }
 }
