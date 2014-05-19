@@ -18,6 +18,7 @@ public class FizzBuzzTest {
 
     public static void assertEquals(String expectedResult, String actualResult) {
         if(! expectedResult.equals(actualResult)) {
+            System.out.println("Expected " + expectedResult + ", but result is " + actualResult);
             testResult = false;
         }
     }
