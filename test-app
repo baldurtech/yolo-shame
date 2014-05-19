@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+./clean
+./compile
+java -classpath target/classes com.baldurtech.yolo.shame.FizzBuzzTest
