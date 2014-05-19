@@ -2,6 +2,8 @@ package com.baldurtech.yolo.shame;
 
 public class FizzBuzzTest {
     static Boolean testResult = true;
+    static Integer countSuccess = 0;
+    static Integer countFail = 0;
 
     public static void main(String[] args) {
         FizzBuzz app = new FizzBuzz();
@@ -17,7 +19,10 @@ public class FizzBuzzTest {
     }
 
     public static void assertEquals(String expectedResult, String actualResult) {
-        if(! expectedResult.equals(actualResult)) {
+        if(expectedResult.equals(actualResult)) {
+            countSuccess ++;
+        } else {
+            countFail ++;
             System.out.println("Expected " + expectedResult + ", but result is " + actualResult);
             testResult = false;
         }
@@ -25,5 +30,6 @@ public class FizzBuzzTest {
 
     public static void outputTestReport() {
         System.out.println("Test result: " + (testResult ? "SUCCESS" : "FAIL"));
+        System.out.println("Test pass: " + countSuccess + ", test fail: " + countFail);
     }
 }
