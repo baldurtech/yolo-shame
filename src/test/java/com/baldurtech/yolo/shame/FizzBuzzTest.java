@@ -50,6 +50,12 @@ public class FizzBuzzTest {
         assertEquals("Fizz", app.say(42));
     }
 
+    public void test_fortytwo() {
+        FizzBuzz app = new FizzBuzz();
+        assertEquals("Fizz", app.say(42));
+        assertEquals("Fizz", app.say(42));
+    }
+
     public void test_10() {
         assertEquals("Buzz", app.say(10));
     }
