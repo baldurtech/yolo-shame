@@ -1,5 +1,7 @@
 package com.baldurtech.yolo.shame;
 
+import java.lang.reflect.Method;
+
 public class FizzBuzzTest {
     static Boolean testResult = true;
     static Integer countSuccess = 0;
@@ -10,17 +12,22 @@ public class FizzBuzzTest {
     }
 
     public static void runTest() {
-        new FizzBuzzTest().test_1();
-
-        new FizzBuzzTest().test_3();
-
-        new FizzBuzzTest().test_5();
-
-        new FizzBuzzTest().test_42();
-
-        new FizzBuzzTest().test_10();
-
-        new FizzBuzzTest().test_15();
+        Method[] methods = FizzBuzzTest.class.getDeclaredMethods();
+        for(Method method: methods) {
+            System.out.println("method: " + method.getName());
+            if(method.getName().startsWith("test")) {
+                System.out.println("  invoke: " + method.getName());
+                try {
+                    /*
+                       下面的代码等同于 new FizzBuzzTest().method()
+                       但是这个 method 是一个以 test 开头的方法，而且没有参数。
+                     */
+                    method.invoke(new FizzBuzzTest());
+                } catch(Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
 
         outputTestReport();
     }
