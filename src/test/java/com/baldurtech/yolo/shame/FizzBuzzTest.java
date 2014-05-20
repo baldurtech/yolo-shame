@@ -10,48 +10,44 @@ public class FizzBuzzTest {
     }
 
     public static void runTest() {
-        test_1();
+        new FizzBuzzTest().test_1();
 
-        test_3();
+        new FizzBuzzTest().test_3();
 
-        test_5();
+        new FizzBuzzTest().test_5();
 
-        test_42();
+        new FizzBuzzTest().test_42();
 
-        test_10();
+        new FizzBuzzTest().test_10();
 
-        test_15();
+        new FizzBuzzTest().test_15();
 
         outputTestReport();
     }
 
-    public static void test_1() {
-        FizzBuzz app = new FizzBuzz();
+    FizzBuzz app = new FizzBuzz();
+
+    public void test_1() {
         assertEquals("1", app.say(1));
     }
 
-    public static void test_3() {
-        FizzBuzz app = new FizzBuzz();
+    public void test_3() {
         assertEquals("Fizz", app.say(3));
     }
 
-    public static void test_5() {
-        FizzBuzz app = new FizzBuzz();
+    public void test_5() {
         assertEquals("Buzz", app.say(5));
     }
 
-    public static void test_42() {
-        FizzBuzz app = new FizzBuzz();
+    public void test_42() {
         assertEquals("Fizz", app.say(42));
     }
 
-    public static void test_10() {
-        FizzBuzz app = new FizzBuzz();
+    public void test_10() {
         assertEquals("Buzz", app.say(10));
     }
 
-    public static void test_15() {
-        FizzBuzz app = new FizzBuzz();
+    public void test_15() {
         assertEquals("FizzBuzz", app.say(15));
     }
 
