@@ -12,7 +12,10 @@ public abstract class YoloTestCase {
     }
 
     public static void runTest() {
-        Class testCaseClazz = FizzBuzzTest.class;
+        runTest(FizzBuzzTest.class);
+    }
+
+    public static void runTest(Class testCaseClazz) {
         Method[] methods = testCaseClazz.getDeclaredMethods();
         for(Method method: methods) {
             System.out.println("method: " + method.getName());
