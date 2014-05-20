@@ -12,7 +12,8 @@ public abstract class YoloTestCase {
     }
 
     public static void runTest() {
-        Method[] methods = FizzBuzzTest.class.getDeclaredMethods();
+        Class testCaseClazz = FizzBuzzTest.class;
+        Method[] methods = testCaseClazz.getDeclaredMethods();
         for(Method method: methods) {
             System.out.println("method: " + method.getName());
             if(method.getName().startsWith("test")) {
@@ -22,7 +23,7 @@ public abstract class YoloTestCase {
                        下面的代码等同于 new FizzBuzzTest().method()
                        但是这个 method 是一个以 test 开头的方法，而且没有参数。
                      */
-                    method.invoke(new FizzBuzzTest());
+                    method.invoke(testCaseClazz.newInstance());
                 } catch(Exception e) {
                     e.printStackTrace();
                 }
