@@ -16,6 +16,9 @@ public abstract class YoloTestCase {
     }
 
     public static void runTest(Class testCaseClazz) {
+        if(testCaseClazz.getSuperclass() != YoloTestCase.class) {
+            return;
+        }
         Method[] methods = testCaseClazz.getDeclaredMethods();
         for(Method method: methods) {
             System.out.println("method: " + method.getName());
