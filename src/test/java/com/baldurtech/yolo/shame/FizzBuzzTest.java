@@ -11,12 +11,21 @@ public class FizzBuzzTest {
 
     public static void runTest() {
         FizzBuzz app = new FizzBuzz();
-
         assertEquals("1", app.say(1));
+
+        app = new FizzBuzz();
         assertEquals("Fizz", app.say(3));
+
+        app = new FizzBuzz();
         assertEquals("Buzz", app.say(5));
+
+        app = new FizzBuzz();
         assertEquals("Fizz", app.say(42));
+
+        app = new FizzBuzz();
         assertEquals("Buzz", app.say(10));
+
+        app = new FizzBuzz();
         assertEquals("FizzBuzz", app.say(15));
 
         outputTestReport();
