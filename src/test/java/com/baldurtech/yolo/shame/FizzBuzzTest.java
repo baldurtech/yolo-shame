@@ -10,25 +10,49 @@ public class FizzBuzzTest {
     }
 
     public static void runTest() {
-        FizzBuzz app = new FizzBuzz();
-        assertEquals("1", app.say(1));
+        test_1();
 
-        app = new FizzBuzz();
-        assertEquals("Fizz", app.say(3));
+        test_3();
 
-        app = new FizzBuzz();
-        assertEquals("Buzz", app.say(5));
+        test_5();
 
-        app = new FizzBuzz();
-        assertEquals("Fizz", app.say(42));
+        test_42();
 
-        app = new FizzBuzz();
-        assertEquals("Buzz", app.say(10));
+        test_10();
 
-        app = new FizzBuzz();
-        assertEquals("FizzBuzz", app.say(15));
+        test_15();
 
         outputTestReport();
+    }
+
+    public static void test_1() {
+        FizzBuzz app = new FizzBuzz();
+        assertEquals("1", app.say(1));
+    }
+
+    public static void test_3() {
+        FizzBuzz app = new FizzBuzz();
+        assertEquals("Fizz", app.say(3));
+    }
+
+    public static void test_5() {
+        FizzBuzz app = new FizzBuzz();
+        assertEquals("Buzz", app.say(5));
+    }
+
+    public static void test_42() {
+        FizzBuzz app = new FizzBuzz();
+        assertEquals("Fizz", app.say(42));
+    }
+
+    public static void test_10() {
+        FizzBuzz app = new FizzBuzz();
+        assertEquals("Buzz", app.say(10));
+    }
+
+    public static void test_15() {
+        FizzBuzz app = new FizzBuzz();
+        assertEquals("FizzBuzz", app.say(15));
     }
 
     public static void assertEquals(String expectedResult, String actualResult) {
