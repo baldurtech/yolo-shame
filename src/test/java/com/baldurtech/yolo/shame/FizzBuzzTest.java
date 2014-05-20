@@ -2,7 +2,7 @@ package com.baldurtech.yolo.shame;
 
 import java.lang.reflect.Method;
 
-public class FizzBuzzTest {
+public class FizzBuzzTest extends YoloTestCase {
     static Boolean testResult = true;
     static Integer countSuccess = 0;
     static Integer countFail = 0;
