@@ -46,8 +46,8 @@ public abstract class YoloTestCase {
     }
 
     public static void outputTestReport() {
-        System.out.println("Test result: " + (testResult ? "SUCCESS" : "FAIL"));
-        System.out.println("Test pass: " + countSuccess + ", test fail: " + countFail);
+        System.out.println("Test result: " + (YoloTestCase.testResult ? "SUCCESS" : "FAIL"));
+        System.out.println("Test pass: " + YoloTestCase.countSuccess + ", test fail: " + YoloTestCase.countFail);
     }
 
 }
