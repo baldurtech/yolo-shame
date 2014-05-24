@@ -8,10 +8,6 @@ public abstract class YoloTestCase {
     static Integer countFail = 0;
 
     public static void main(String[] args) {
-        runTest();
-    }
-
-    public static void runTest() {
         runTest(FizzBuzzTest.class);
     }
 
