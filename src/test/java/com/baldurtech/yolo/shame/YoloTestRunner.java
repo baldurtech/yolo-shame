@@ -18,11 +18,11 @@ public class YoloTestRunner {
         if(testCaseClazz.getSuperclass() != YoloTestCase.class) {
             return;
         }
+        System.out.println("Running test " + testCaseClazz.getName());
         Method[] methods = testCaseClazz.getDeclaredMethods();
         for(Method method: methods) {
-            System.out.println("method: " + method.getName());
             if(method.getName().startsWith("test")) {
-                System.out.println("  invoke: " + method.getName());
+                System.out.println("tesing: " + method.getName());
                 try {
                     /*
                        下面的代码等同于 new FizzBuzzTest().method()
@@ -43,6 +43,7 @@ public class YoloTestRunner {
     }
 
     public static void outputTestReport() {
+        System.out.println("");
         System.out.println("Test result: " + (YoloTestCase.testResult ? "SUCCESS" : "FAIL"));
         System.out.println("Test pass: " + YoloTestCase.countSuccess + ", test fail: " + YoloTestCase.countFail);
     }
