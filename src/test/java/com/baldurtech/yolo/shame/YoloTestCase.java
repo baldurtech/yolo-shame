@@ -7,6 +7,11 @@ public abstract class YoloTestCase {
 
     public static void assertEquals(String expectedResult, String actualResult) {
         Boolean resultIsEquals = expectedResult.equals(actualResult);
+        assertEquals(expectedResult, actualResult, resultIsEquals);
+    }
+
+    private static void assertEquals(String expectedResult, String actualResult,
+                                     Boolean resultIsEquals) {
         if(resultIsEquals) {
             countSuccess ++;
         } else {
