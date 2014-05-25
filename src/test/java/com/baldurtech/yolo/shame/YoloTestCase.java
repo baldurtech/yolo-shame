@@ -6,8 +6,7 @@ public abstract class YoloTestCase {
     static Integer countFail = 0;
 
     public static void assertEquals(String expectedResult, String actualResult) {
-        Boolean resultIsEquals = expectedResult.equals(actualResult);
-        assertEquals(expectedResult, actualResult, resultIsEquals);
+        assertEquals(expectedResult, actualResult, expectedResult.equals(actualResult));
     }
 
     private static void assertEquals(String expectedResult, String actualResult,
