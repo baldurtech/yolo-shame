@@ -12,7 +12,7 @@ public abstract class YoloTestCase {
     }
 
     public static void assertEquals(List expectedResult, List actualResult) {
-        Boolean isEquals = expectedResult.size() == actualResult.size();
+        Boolean isEquals = equals(expectedResult, actualResult);
         if(isEquals) {
             for(int i = 0; i < expectedResult.size(); i++) {
                 if(! equals(expectedResult.get(i), actualResult.get(i))) {
@@ -21,7 +21,8 @@ public abstract class YoloTestCase {
                 }
             }
         }
-        assertEquals(expectedResult.toString(), actualResult.toString(), isEquals);
+        assertEquals((expectedResult != null)?expectedResult.toString():"null",
+                     (actualResult != null)?actualResult.toString():"null", isEquals);
     }
 
     private static Boolean equals(Object a, Object b) {
