@@ -5,10 +5,6 @@ public abstract class YoloTestCase {
     static Integer countSuccess = 0;
     static Integer countFail = 0;
 
-    public static void main(String[] args) {
-        YoloTestRunner.runTest(FizzBuzzTest.class);
-    }
-
     public static void assertEquals(String expectedResult, String actualResult) {
         if(expectedResult.equals(actualResult)) {
             countSuccess ++;
