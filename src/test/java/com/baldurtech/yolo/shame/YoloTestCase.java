@@ -10,7 +10,7 @@ public abstract class YoloTestCase {
             countSuccess ++;
         } else {
             countFail ++;
-            System.out.println("Expected " + expectedResult + ", but result is " + actualResult);
+            System.out.println("Expected `" + expectedResult + "', but result is `" + actualResult + "'");
             testResult = false;
         }
     }
