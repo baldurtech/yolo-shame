@@ -35,6 +35,10 @@ public abstract class YoloTestCase {
         outputTestReport();
     }
 
+    public static void runTest(YoloTestCase yoloTestCase) {
+        runTest(yoloTestCase.getClass());
+    }
+
     public static void assertEquals(String expectedResult, String actualResult) {
         if(expectedResult.equals(actualResult)) {
             countSuccess ++;
